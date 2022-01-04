@@ -156,7 +156,10 @@ Rest endpoint for the published pipeline is shown below with status as active:
 
 ![image](https://user-images.githubusercontent.com/19474037/147996667-636d48fa-1a65-4fa8-83e9-a763f68c0825.png)
 
-![image](https://user-images.githubusercontent.com/19474037/147996680-31b12fdd-0b49-4bcc-b870-73304e2615b3.png)
+Deployed Pipeline 
+
+![image](https://user-images.githubusercontent.com/19474037/148015402-d3e6771f-824b-4041-acff-4b330aed3cfd.png)
+
 
 **A short description of how to improve the project in the future**
 
