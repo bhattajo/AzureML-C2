@@ -52,21 +52,29 @@ The best model was deployed and an endpoint was created using AzureML studio (AM
 ![image](https://user-images.githubusercontent.com/19474037/147995562-711df9ee-8b1b-4bd9-827f-76a86f0e521f.png)
 
 
-***Detailed screenshots of the steps***
+***Step 7: Create, Publish and Consume a Pipeline***
 
 **Dataset**:
+
+Image shows Dataset creation for AutoML run.
 
 ![image](https://user-images.githubusercontent.com/19474037/147996031-e354d0cb-1912-4c39-8ec0-c35cf2cca114.png)
 
 
-**AutoML config***
+**AutoML config**
+
+Shown below the automl_config object values used for this pipeline:
 
 ![image](https://user-images.githubusercontent.com/19474037/147996168-fa5c2d3b-2a2b-497b-b375-adfcafe55c31.png)
+
+Create an AutoML step with name automl_module and above settings:
 
 ![image](https://user-images.githubusercontent.com/19474037/147996225-408231ce-01a9-4288-9ed2-742678cfd30d.png)
 
 
 ***pipeline***
+
+Pipeline run details after it got submitted by the steo experiment.submit(pipeline
 
 ![image](https://user-images.githubusercontent.com/19474037/147996303-06d6d40c-af45-4db2-915f-106e818519d7.png)
 
@@ -92,32 +100,54 @@ The best model was deployed and an endpoint was created using AzureML studio (AM
 ![image](https://user-images.githubusercontent.com/19474037/147996680-31b12fdd-0b49-4bcc-b870-73304e2615b3.png)
 
 **AutoML Run from AMLS and consuming endpoint**
+
 ***Step 1: Creating Service Principal & Authentication***
 
 Create service principal account and associate it with my specific workspace:
 
 ![image](https://user-images.githubusercontent.com/19474037/148012188-bb63cd4f-71ee-49e0-9490-16668bfde071.png)
 
+***Step 2: Automated ML Experiment***
 
-![image](https://user-images.githubusercontent.com/19474037/147996873-036a79c8-6b0e-466c-b2f9-bcca8c11c937.png)
+created an experiment using Automated ML, configured a compute cluster, and used that cluster to run the experiment. Shown below the screenshot on completed experiment and best Model:
 
-![image](https://user-images.githubusercontent.com/19474037/147997045-b672c412-881e-448f-8120-b45c8cbb2f65.png)
+![image](https://user-images.githubusercontent.com/19474037/148012704-991be386-1cb4-4a60-b762-9c3eb0c7f7aa.png)
 
-![image](https://user-images.githubusercontent.com/19474037/147997061-85e8eacc-8fe5-42a0-b10f-bca5ade517b6.png)
+***Step 3: Deployed best Model***
 
-![image](https://user-images.githubusercontent.com/19474037/147997067-45451d10-5493-42ba-ac4a-233b7b93ece7.png)
+Deployed the Best Model for consumption and interact with the model by sending data over POST requests.:
 
-![image](https://user-images.githubusercontent.com/19474037/147997256-9721443e-f29d-4e54-a81f-9bb95ba90971.png)
+![image](https://user-images.githubusercontent.com/19474037/148012989-cd0d7094-bee2-418c-8fed-d9d6267b278b.png)
 
+***Step 4: Enable Application Insights***
 
-![image](https://user-images.githubusercontent.com/19474037/147997112-97c5db42-01b9-4b38-95bb-f34b819af2ad.png)
+Enabled Application Insights and retrieved the  logs by running the logs.py script.:
 
-![image](https://user-images.githubusercontent.com/19474037/147997151-f741a8c1-7c89-4c7b-b1bb-ea5dd676f55f.png)
-
-![image](https://user-images.githubusercontent.com/19474037/147997327-73ddb37f-5a78-4fd5-ba87-4371f3e1963f.png)
-
+![image](https://user-images.githubusercontent.com/19474037/148013440-e882299a-4032-4581-b0fd-0ca6baa3e2bc.png)
 
 
+Screenshot showing logs by running the provided logs.py script:
+
+![image](https://user-images.githubusercontent.com/19474037/148013493-f2306d73-02b5-4063-9b28-c88095898ec7.png)
+
+
+***Step 5: Swagger Documentation***
+
+User docker swagger container to analyze the swagger.json created by Azure for the deployed endpoint.
+
+![image](https://user-images.githubusercontent.com/19474037/148013761-b71982c2-9e48-4a21-a15b-a549ce3c9e73.png)
+
+
+***Step 6: Consume Model Endpoints***
+
+Consumed the model using the endpoint.py script provided to interact with it. In this step, I modified both the scoring_uri and the key to match the key for my service and the URI that was generated after deployment.
+
+![image](https://user-images.githubusercontent.com/19474037/148013922-3ce0d86e-73a4-4456-9fdf-79eadad65e93.png)
+
+
+Screenshot showing that Apache Benchmark (ab) run against the HTTP API to retrieve performance results:
+
+![image](https://user-images.githubusercontent.com/19474037/148014126-65077b22-51a8-4402-8cda-982079a1695a.png)
 
 
 **A short description of how to improve the project in the future**
