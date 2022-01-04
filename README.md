@@ -52,53 +52,6 @@ The best model was deployed and an endpoint was created using AzureML studio (AM
 ![image](https://user-images.githubusercontent.com/19474037/147995562-711df9ee-8b1b-4bd9-827f-76a86f0e521f.png)
 
 
-***Step 7: Create, Publish and Consume a Pipeline***
-
-**Dataset**:
-
-Image shows Dataset creation for AutoML run.
-
-![image](https://user-images.githubusercontent.com/19474037/147996031-e354d0cb-1912-4c39-8ec0-c35cf2cca114.png)
-
-
-**AutoML config**
-
-Shown below the automl_config object values used for this pipeline:
-
-![image](https://user-images.githubusercontent.com/19474037/147996168-fa5c2d3b-2a2b-497b-b375-adfcafe55c31.png)
-
-Create an AutoML step with name automl_module and above settings:
-
-![image](https://user-images.githubusercontent.com/19474037/147996225-408231ce-01a9-4288-9ed2-742678cfd30d.png)
-
-
-***pipeline***
-
-Pipeline run details after it got submitted by the steo experiment.submit(pipeline
-
-![image](https://user-images.githubusercontent.com/19474037/147996303-06d6d40c-af45-4db2-915f-106e818519d7.png)
-
-
-![image](https://user-images.githubusercontent.com/19474037/147996334-1f6b05cd-d162-4349-a3d3-27dcc388bc1f.png)
-
-![image](https://user-images.githubusercontent.com/19474037/147996413-35223bba-e30c-4b79-b090-e83853fdedda.png)
-
-![image](https://user-images.githubusercontent.com/19474037/147996450-e1674061-80bc-4976-8a8b-0d875fd10820.png)
-
-![image](https://user-images.githubusercontent.com/19474037/147996483-b3ae69a4-fcc8-453a-99aa-cdf8a8eea07f.png)
-
-![image](https://user-images.githubusercontent.com/19474037/147996509-98d67172-c597-4b99-a9c5-9aa98b330eb4.png)
-
-![image](https://user-images.githubusercontent.com/19474037/147996637-6d569d08-62fc-435a-acff-50595e85271d.png)
-
-![image](https://user-images.githubusercontent.com/19474037/147996651-60372bd3-47da-41ed-bf2b-4a86864a9638.png)
-
-![image](https://user-images.githubusercontent.com/19474037/147996662-b015de6c-506a-4f37-b3cc-2dba00b78186.png)
-
-![image](https://user-images.githubusercontent.com/19474037/147996667-636d48fa-1a65-4fa8-83e9-a763f68c0825.png)
-
-![image](https://user-images.githubusercontent.com/19474037/147996680-31b12fdd-0b49-4bcc-b870-73304e2615b3.png)
-
 **AutoML Run from AMLS and consuming endpoint**
 
 ***Step 1: Creating Service Principal & Authentication***
@@ -149,6 +102,61 @@ Screenshot showing that Apache Benchmark (ab) run against the HTTP API to retrie
 
 ![image](https://user-images.githubusercontent.com/19474037/148014126-65077b22-51a8-4402-8cda-982079a1695a.png)
 
+
+***Step 7: Create, Publish and Consume a Pipeline***
+
+**Dataset**:
+
+Image shows Dataset creation for AutoML run.
+
+![image](https://user-images.githubusercontent.com/19474037/147996031-e354d0cb-1912-4c39-8ec0-c35cf2cca114.png)
+
+
+**AutoML config**
+
+Shown below the automl_config object values used for this pipeline:
+
+![image](https://user-images.githubusercontent.com/19474037/147996168-fa5c2d3b-2a2b-497b-b375-adfcafe55c31.png)
+
+Create an AutoML step with name automl_module and above settings:
+
+![image](https://user-images.githubusercontent.com/19474037/147996225-408231ce-01a9-4288-9ed2-742678cfd30d.png)
+
+
+***pipeline***
+
+Pipeline run details after it got submitted by the steo experiment.submit(pipeline)
+
+![image](https://user-images.githubusercontent.com/19474037/147996303-06d6d40c-af45-4db2-915f-106e818519d7.png)
+
+
+![image](https://user-images.githubusercontent.com/19474037/147996334-1f6b05cd-d162-4349-a3d3-27dcc388bc1f.png)
+
+Retrieving the best Model
+
+![image](https://user-images.githubusercontent.com/19474037/147996413-35223bba-e30c-4b79-b090-e83853fdedda.png)
+
+![image](https://user-images.githubusercontent.com/19474037/147996450-e1674061-80bc-4976-8a8b-0d875fd10820.png)
+
+Publish and run from Rest endpoint, using the code below the pipeline is publised in my workspace
+
+![image](https://user-images.githubusercontent.com/19474037/147996483-b3ae69a4-fcc8-453a-99aa-cdf8a8eea07f.png)
+
+![image](https://user-images.githubusercontent.com/19474037/147996509-98d67172-c597-4b99-a9c5-9aa98b330eb4.png)
+
+RunDetail for the published pipeline is shown below:
+
+![image](https://user-images.githubusercontent.com/19474037/147996637-6d569d08-62fc-435a-acff-50595e85271d.png)
+
+Rest endpoint for the published pipeline is shown below with status as active:
+
+![image](https://user-images.githubusercontent.com/19474037/147996651-60372bd3-47da-41ed-bf2b-4a86864a9638.png)
+
+![image](https://user-images.githubusercontent.com/19474037/147996662-b015de6c-506a-4f37-b3cc-2dba00b78186.png)
+
+![image](https://user-images.githubusercontent.com/19474037/147996667-636d48fa-1a65-4fa8-83e9-a763f68c0825.png)
+
+![image](https://user-images.githubusercontent.com/19474037/147996680-31b12fdd-0b49-4bcc-b870-73304e2615b3.png)
 
 **A short description of how to improve the project in the future**
 
