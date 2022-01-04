@@ -1,7 +1,9 @@
 # Operationalizing Machine Learning
 **An overview of the project**
 
-The project is part of Udacity NanoDegree program and in this project we operationalize a ML model using AutoML feature and python sdk. Here are the setps shown below in the image.
+The project is part of Udacity NanoDegree program and in this project we deploy ML models on Microsoft Azure to operationalize. AutoML is one feature we used in this project to train the model and pick the best classifier for deployment. We also use python sdk to interact with the Azure ML platform. The model is then consumed using a python script from the local windows machine using SDK. The scoring endpoint and auth key was nedded to do that. The output is shared below in the screen later shots. Finally we created a pipeline to automate the entire workflow using jupyter notebook as control place and using Azure ML SDK and libraries to interact with Microsoft Azure.
+
+The setps are shown below in the image. 
 
 ![image](https://user-images.githubusercontent.com/19474037/147993721-d8a06993-99bc-4581-b79c-f2470db1c21e.png)
 
@@ -90,6 +92,12 @@ The best model was deployed and an endpoint was created using AzureML studio (AM
 ![image](https://user-images.githubusercontent.com/19474037/147996680-31b12fdd-0b49-4bcc-b870-73304e2615b3.png)
 
 **AutoML Run from AMLS and consuming endpoint**
+***Step 1: Creating Service Principal & Authentication***
+
+Create service principal account and associate it with my specific workspace:
+
+![image](https://user-images.githubusercontent.com/19474037/148012188-bb63cd4f-71ee-49e0-9490-16668bfde071.png)
+
 
 ![image](https://user-images.githubusercontent.com/19474037/147996873-036a79c8-6b0e-466c-b2f9-bcca8c11c937.png)
 
